@@ -16,7 +16,6 @@
     <script src="<?php echo base_url('asset/front/js/jquery-2.2.3.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>asset/front/js/front.js"></script>
   </head>
-
   <body style="background-color:#d9d9d9">
 
     <!-- Fixed navbar -->
@@ -43,11 +42,11 @@
                       $m4="4";
                       $m5="5";
                 ?>
-                <li><a href="<?php echo base_url('show_by_type/index/'.$m1) ?>">บ้านเดี่ยว</a></li>
-                <li><a href="<?php echo base_url('show_by_type/index/').$m2 ?>">ทาวเฮ้าส์</a></li>
-                <li><a href="<?php echo base_url('show_by_type/index/').$m3 ?>">คอนโดมิเนียม</a></li>
-                <li><a href="<?php echo base_url('show_by_type/index/').$m4 ?>">อพาตเมนต์</a></li>
-                <li><a href="<?php echo base_url('show_by_type/index/').$m5 ?>">ที่ดิน</a></li>
+                <li><a href="<?php echo base_url('sale_house') ?>">บ้านเดี่ยว</a></li>
+                <li><a href="<?php echo base_url('sale_townhouse')?>">ทาวเฮ้าส์</a></li>
+                <li><a href="<?php echo base_url('sale_condo') ?>">คอนโดมิเนียม</a></li>
+                <li><a href="<?php echo base_url('sale_apartment') ?>">อพาตเมนต์</a></li>
+                <li><a href="<?php echo base_url('sale_land') ?>">ที่ดิน</a></li>
               </ul>
             </li>
             <li class="dropdown">

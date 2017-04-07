@@ -33,17 +33,72 @@
     .explore a {color: green; font-size: 13px;font-weight: 600}
     .twitter a {color:#4099FF}
     .img-box{box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);border-radius: 2px;border: 0;}
+
+    /* search & filter */
+    .post-search-panel input[type="text"]{
+    	width: 220px;
+        height: 28px;
+        color: #333;
+        font-size: 16px;
+    }
+    .post-search-panel select{
+        height: 34px;
+        color: #333;
+        font-size: 16px;
+    }
+
+    /* loading */
+    .loading{position: absolute;left: 0; top: 0; right: 0; bottom: 0;z-index: 2;background: rgba(255,255,255,0.7);}
+    .loading .content {
+        position: absolute;
+        transform: translateY(-50%);
+         -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+        top: 50%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #555;
+    }
 </style>
+<script>
+  function searchFilter(page_num) {
+  page_num = page_num?page_num:0;
+  var keywords = $('#keywords').val();
+  var sortBy = $('#sortBy').val();
+  $.ajax({
+    type: 'POST',
+    url: '<?php echo base_url(); ?>sale_condo/ajax_condo/'+page_num,
+    data:'page='+page_num+'&keywords='+keywords+'&sortBy='+sortBy,
+    beforeSend: function () {
+      $('.loading').show();
+    },
+    success: function (html) {
+      $('#postList').html(html);
+      $('.loading').fadeOut("slow");
+    }
+  });
+}
+</script>
 <div class="container" style="margin-top:10px">
   <div class="jumbotron" style="background-color:white">
     <div class="row">
       <div class="col-md-8">
-        <h4>รายการ<?php echo $title;?>ล่าสุด</h4>
-        <?php for($i=0;$i<8;$i++){ ?>
+        <h4>รายการ<?php echo $title; ?>ล่าสุด</h4>
+        <div class="post-search-panel">
+    			<input type="text" id="keywords" placeholder="Type keywords to filter posts" onkeyup="searchFilter()"/>
+    			<select id="sortBy" onchange="searchFilter()">
+    				<option value="">เรียงตาม</option>
+    				<option value="asc">ประกาศเก่าสุดสุด</option>
+    				<option value="desc">ประกาศล่าสุด</option>
+    			</select>
+    		</div>
+      <div id="postList">
+        <?php if(!empty($posts)): foreach($posts as $post): ?>
         <div class="row">
                     <div class="col-md-4">
                         <a href="#">
-                            <img src="http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/10/http-www.urchinbali.comgallery.jpg" class="img-responsive img-box img-thumbnail">
+                            <img src="<?php echo base_url().$post['image']?>" class="img-responsive img-box img-thumbnail">
                         </a>
                     </div>
                     <div class="col-md-8">
@@ -51,29 +106,32 @@
                             <div class="list-group-item">
                                 <div class="row-picture">
                                     <a href="#" title="sintret">
-                                        <img class="circle img-thumbnail img-box" src="http://sintret.com/img/andy.jpg" alt="sintret">
+                                        <img class="circle img-thumbnail img-box" src="<?php echo base_url().$post['userimage']?>" alt="sintret">
                                     </a>
                                 </div>
                                 <div class="row-content">
                                     <div class="list-group-item-heading">
                                         <a href="#" title="sintret">
-                                            <small>sintret</small>
+                                            <small><?php echo $post['first_name']?> <?php echo $post['last_name']?></small>
                                         </a>
                                     </div>
                                     <small>
-                                        <i class="glyphicon glyphicon-time"></i> 3 days ago via <span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/sintret" alt="sintret" title="sintret">@sintret</a></span>
-                                        <br>
-                                        <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="#">Explore 2 places </a></span>
+                                        <i class="glyphicon glyphicon-time"></i> <?php echo $post['created']?> </span>
                                     </small>
                                 </div>
                             </div>
                         </div>
-                        <h5><a href="#">5 of Bali’s Spanking New Haunts - WanderLuxe Magazine</a></h5>
+                        <h5><a href="#"><?php echo $post['propertyname']?></a></h5>
                     </div>
                 </div>
                 <hr>
-                <?php }?>
+                <?php endforeach; else: ?>
+                  <p>Post(s) not available.</p>
+                  <?php endif; ?>
+                  <?php echo $this->ajax_pagination->create_links(); ?>
               </div>
+              <div class="loading" style="display: none;"><div class="content"><img src="<?php echo base_url().'asset/front/loading.gif'; ?>"/></div></div>
+            </div>
       <div class="col-md-4">
         right
       </div>
