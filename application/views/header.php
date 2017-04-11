@@ -42,11 +42,10 @@
                       $m4="4";
                       $m5="5";
                 ?>
-                <li><a href="<?php echo base_url('sale_house') ?>">บ้านเดี่ยว</a></li>
-                <li><a href="<?php echo base_url('sale_townhouse')?>">ทาวเฮ้าส์</a></li>
-                <li><a href="<?php echo base_url('sale_condo') ?>">คอนโดมิเนียม</a></li>
-                <li><a href="<?php echo base_url('sale_apartment') ?>">อพาตเมนต์</a></li>
-                <li><a href="<?php echo base_url('sale_land') ?>">ที่ดิน</a></li>
+                <li><a href="<?php echo base_url('show_by_type/sale_house') ?>">บ้านเดี่ยว</a></li>
+                <li><a href="<?php echo base_url('show_by_type/sale_townhouse')?>">ทาวเฮ้าส์</a></li>
+                <li><a href="<?php echo base_url('show_by_type/sale_condo') ?>">คอนโดมิเนียม</a></li>
+                <li><a href="<?php echo base_url('show_by_type/sale_land') ?>">ที่ดิน</a></li>
               </ul>
             </li>
             <li class="dropdown">

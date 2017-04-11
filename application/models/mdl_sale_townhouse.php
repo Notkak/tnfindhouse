@@ -9,7 +9,10 @@ class mdl_sale_townhouse extends CI_Model{
   }
 
   public function get_townhouse($params = array()){
-    $ptype="ทาวน์เฮ้าส์";
+    $type=array(
+                  'ptype'=>'ทาวน์เฮ้าส์',
+                  'proptype'=>'ขาย'
+    );
     $this->db->select('*');
     $this->db->from('property');
     $this->db->join('user','user.user_id = property.user_id');
@@ -29,7 +32,7 @@ class mdl_sale_townhouse extends CI_Model{
     }elseif(!array_key_exists("start",$params) && array_key_exists("limit",$params)){
         $this->db->limit($params['limit']);
     }
-    $this->db->where('ptype',$ptype);
+    $this->db->where($type);
     //get records
     $query = $this->db->get();
     $rs=$query->result_array();

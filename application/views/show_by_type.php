@@ -68,7 +68,7 @@
   var sortBy = $('#sortBy').val();
   $.ajax({
     type: 'POST',
-    url: '<?php echo base_url(); ?>sale_<?php echo $type; ?>/ajax_<?php echo $type; ?>/'+page_num,
+    url: '<?php echo base_url(); ?>show_by_type/ajax_<?php echo $ptype; ?>_<?php echo $type; ?>/'+page_num,
     data:'page='+page_num+'&keywords='+keywords+'&sortBy='+sortBy,
     beforeSend: function () {
       $('.loading').show();

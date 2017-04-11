@@ -24,6 +24,7 @@ class sale_house extends CI_Controller{
     $data['posts'] = $this->msh->get_house(array('limit'=>$this->perPage));
     // echo "<pre>";print_r($rs_data);exit();
     $data['title']="บ้านเดี่ยว";
+    $data['type']="house";
     $this->load->view('header',$data);
     $this->load->view('show_sale_house',$data);
     $this->load->view('footer');

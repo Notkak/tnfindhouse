@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class mdl_sale_house extends CI_Model{
+class mdl_sale_land extends CI_Model{
 
 
   public function __construct()
@@ -8,18 +8,17 @@ class mdl_sale_house extends CI_Model{
 
   }
 
-  public function get_house($params = array()){
+  public function get_land($params = array()){
     $type=array(
-                  'ptype'=>'บ้านเดี่ยว',
+                  'ptype'=>'ที่ดิน',
                   'proptype'=>'ขาย'
-
     );
     $this->db->select('*');
     $this->db->from('property');
     $this->db->join('user','user.user_id = property.user_id');
     //filter data by searched keywords
     if(!empty($params['search']['keywords'])){
-        $this->db->like('propertyname',$params['search']['keywords']);
+        $this->db->like('title',$params['search']['keywords']);
     }
     //sort data by ascending or desceding order
     if(!empty($params['search']['sortBy'])){
