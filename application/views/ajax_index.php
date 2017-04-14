@@ -1,6 +1,5 @@
 <div id="content">
 <!-- Latest property -->
-
       <div class="row">
         <?php
             foreach($rs_word->result() as $row_word):
@@ -19,7 +18,7 @@
 
               <article class="aa-properties-item">
                 <a href="#" class="aa-properties-item-img">
-                  <img src="<?php echo base_url().$img ?>" width="200px" alt="img">
+                  <img src="<?php echo base_url().$img ?>" width="200px" height="200px" alt="img">
                 </a>
                 <div class="aa-tag for-<?php echo $status_label ?>">
                   <?= $status_desc ?>

@@ -52,28 +52,22 @@ class late_prop extends CI_Controller {
 
   $this->pagination->initialize($config);
   $data['pagination'] = $this->pagination->create_links();
-  $data_map=$this->load_map();
   $data['title'] = "Home";
   $data['alert']=false;
   $this->load->view('header', $data);
-  if ($this->input->post('ajax')) {
-    $this->load->view('ajax_index', $data);
-  } else {
-    $this->load->view('late_prop', $data);
-  }
-  $this->load->view('home_map', $data_map);
+  $this->load->view('search');
+  $this->load->view('home_slide', $data);
+  $this->load->view('home_slide', $data);
+  $this->load->view('home_slide', $data);
+  $this->load->view('home_slide', $data);
+  // if ($this->input->post('ajax')) {
+  //   $this->load->view('ajax_index', $data);
+  // } else {
+  //   $this->load->view('late_prop', $data);
+  // }
   $this->load->view('footer');
  }
 
- function load_map(){
-   $config['center'] = '13.746533, 100.5328842';
-   $config['zoom'] = '9';
-   $this->googlemaps->initialize($config);
-   $marker = array();
-   $marker['position'] = '13.746533, 100.5328842';
-   $this->googlemaps->add_marker($marker);
-   $data['map'] = $this->googlemaps->create_map();
-   return $data;
- }
+
 
 }

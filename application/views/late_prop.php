@@ -42,7 +42,7 @@
                               echo number_format($row_word->price);
                           ?> ฿
                         </span>
-                        <a href="<?php echo base_url() ?>detail_prop/index/<?= $id ?>" class="btn btn-primary">View Details</a>
+                        <a href="<?php echo base_url() ?>detail_prop/index/<?= $id ?>" class="btn btn-primary">รายละเอียด</a>
                       </div>
                     </div>
                   </article>

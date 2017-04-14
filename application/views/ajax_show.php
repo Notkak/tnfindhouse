@@ -25,11 +25,27 @@
                         </div>
                     </div>
                 </div>
-                <h5><a href="#"><?php echo $post['propertyname']?></a></h5>
+                <div class="row">
+                  <div class="col-md-9">
+                    <h4><a href="#"><?php echo $post['propertyname']?></a></h4>
+                  </div>
+                  <div class="col-md-3">
+                    <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>"> <?php echo $post['broom']?>  </img>
+                    <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>"> <?php echo$post['rroom']?></img>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-9">
+                    <h5><a href="#"><?php echo number_format($post['price']);?> ฿</a></h5>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="<?php echo base_url() ?>detail_prop/index/<?php echo $post['property_id']?>" class="btn btn-primary">รายละเอียด</a>
+                  </div>
+                </div>
             </div>
         </div>
         <hr>
         <?php endforeach; else: ?>
-          <p>Post(s) not available.</p>
+          <p>ขออภัย, ไม่พบรายการประกาศ</p>
           <?php endif; ?>
           <?php echo $this->ajax_pagination->create_links(); ?>

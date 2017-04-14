@@ -38,7 +38,7 @@
 
 body {
   background-color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Prompt', sans-serif;
   color: #333333;
   font-size: 15px;
   overflow-x: hidden;
@@ -56,6 +56,7 @@ ul {
 }
 
 a {
+  font-family: 'Prompt', sans-serif;
   text-decoration: none;
   color: #333333;
 }
@@ -67,7 +68,7 @@ a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Prompt', sans-serif;
 }
 
 h2 {
@@ -101,7 +102,7 @@ img {
     box-shadow: 10px 10px 5px #888888;
 }
 
-.item img {width: 100%; height: 184px;}
+
 
 
 .item p {

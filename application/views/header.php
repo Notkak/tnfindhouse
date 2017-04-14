@@ -15,19 +15,15 @@
     <script src="<?php echo base_url() ?>asset/front/js/ie-emulation-modes-warning.js"></script>
     <script src="<?php echo base_url('asset/front/js/jquery-2.2.3.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>asset/front/js/front.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
   </head>
-  <body style="background-color:#d9d9d9">
+  <body style="background-color:#4d4d4d; font-family: 'Prompt', sans-serif;">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+
           <a class="navbar-brand" href="<?php echo base_url('late_prop') ?>"><span class="glyphicon glyphicon-home"></span> FindHouse</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -36,12 +32,6 @@
             <li class="dropdown">
               <a href="<?php echo base_url('show_by_type/index/')?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ขาย <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <?php $m1="1";
-                      $m2="2";
-                      $m3="3";
-                      $m4="4";
-                      $m5="5";
-                ?>
                 <li><a href="<?php echo base_url('show_by_type/sale_house') ?>">บ้านเดี่ยว</a></li>
                 <li><a href="<?php echo base_url('show_by_type/sale_townhouse')?>">ทาวเฮ้าส์</a></li>
                 <li><a href="<?php echo base_url('show_by_type/sale_condo') ?>">คอนโดมิเนียม</a></li>
@@ -51,11 +41,10 @@
             <li class="dropdown">
               <a href="<?php echo base_url('show_by_type/index/')?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ให้เช่า <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="<?php echo base_url('show_by_type/index/')?>">บ้านเดี่ยว</a></li>
-                <li><a href="<?php echo base_url('show_by_type/index/')?>">ทาวเฮ้าส์</a></li>
-                <li><a href="<?php echo base_url('show_by_type/index/')?>">คอนโดมิเนียม</a></li>
-                <li><a href="<?php echo base_url('show_by_type/index/')?>">อพาตเมนต์</a></li>
-                <li><a href="<?php echo base_url('show_by_type/index/')?>">ที่ดิน</a></li>
+                <li><a href="<?php echo base_url('show_by_type/rent_house')?>">บ้านเดี่ยว</a></li>
+                <li><a href="<?php echo base_url('show_by_type/rent_townhouse')?>">ทาวเฮ้าส์</a></li>
+                <li><a href="<?php echo base_url('show_by_type/rent_condo')?>">คอนโดมิเนียม</a></li>
+                <li><a href="<?php echo base_url('show_by_type/rent_land')?>">ที่ดิน</a></li>
               </ul>
             </li>
             <li><a href="#about">บทความ</a></li>
