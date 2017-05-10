@@ -65,20 +65,21 @@
 <div class="container">
   <div class='row'>
     <div class='col-md-12'>
+      <div class='row'>
+        <div class='col-md-2'>
+          คอนโดมิเนียม
+        </div>
+        <div class='col-md-8'>
+        </div>
+        <div class='col-md-2'>
+          ดูทั้งหมด
+        </div>
+      </div>
+<hr>
       <div class="carousel slide media-carousel" id="media3">
         <div class="carousel-inner">
           <div class="item  active">
-            <div class='row'>
-              <div class='col-md-2'>
-                คอนโดมิเนียม
-              </div>
-              <div class='col-md-8'>
-              </div>
-              <div class='col-md-2'>
-                ดูทั้งหมด
-              </div>
-            </div>
-  <hr>
+
             <div class="row">
               <?php if(!empty($posts)): for($i=0;$i<3;$i++){ ?>
               <?php
@@ -104,10 +105,10 @@
                   <div class="aa-properties-item-content">
                     <div class="aa-properties-about">
                       <h4><a href="#"><?php echo $posts[$i]['propertyname']; ?></a></h4>
-                      <!-- <div style="float:right">
-                        <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>"> <?php echo $posts[$i]['broom'];?> ห้องนอน</img>
-                        <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>"> <?php echo $posts[$i]['rroom'];?> ห้องน้ำ </img>
-                      </div> -->
+                      <div style="float:right">
+                        <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>" style="width:24px; height:24px;"> <?php echo $posts[$i]['broom'];?> ห้องนอน</img>
+                        <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>" style="width:24px; height:24px;"> <?php echo $posts[$i]['rroom'];?> ห้องน้ำ </img>
+                      </div>
                     </div>
                     <div class="aa-properties-detial">
                       <span class="aa-price">
@@ -152,10 +153,10 @@
                   <div class="aa-properties-item-content">
                     <div class="aa-properties-about">
                       <h4><a href="#"><?php echo $posts[$i]['propertyname']; ?></a></h4>
-                      <!-- <div style="float:right">
-                        <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>"> <?php echo $posts[$i]['broom'];?> ห้องนอน</img>
-                        <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>"> <?php echo $posts[$i]['rroom'];?> ห้องน้ำ </img>
-                      </div> -->
+                      <div style="float:right">
+                        <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>" style="width:24px; height:24px;"> <?php echo $posts[$i]['broom'];?> ห้องนอน</img>
+                        <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>" style="width:24px; height:24px;"> <?php echo $posts[$i]['rroom'];?> ห้องน้ำ </img>
+                      </div>
                     </div>
                     <div class="aa-properties-detial">
                       <span class="aa-price">
@@ -174,8 +175,8 @@
             </div>
           </div>
         </div>
-        <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-        <a data-slide="next" href="#media" class="right carousel-control">›</a>
+        <a data-slide="prev" href="#media3" class="left carousel-control">‹</a>
+        <a data-slide="next" href="#media3" class="right carousel-control">›</a>
       </div>
     </div>
   </div>

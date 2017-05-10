@@ -17,18 +17,18 @@
     <script type="text/javascript" src="<?php echo base_url() ?>asset/front/js/front.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
   </head>
-  <body style="background-color:#4d4d4d; font-family: 'Prompt', sans-serif;">
+  <body style="font-family: 'Prompt', sans-serif;">
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="padding-bottom:5px; ">
+      <div class="container" style="margin-top: 5px ">
         <div class="navbar-header">
 
           <a class="navbar-brand" href="<?php echo base_url('late_prop') ?>"><span class="glyphicon glyphicon-home"></span> FindHouse</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="<?php echo base_url('late_prop') ?>">หน้าหลัก</a></li>
+            <li><a href="<?php echo base_url('late_prop') ?>">หน้าหลัก</a></li>
             <li class="dropdown">
               <a href="<?php echo base_url('show_by_type/index/')?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ขาย <span class="caret"></span></a>
               <ul class="dropdown-menu">

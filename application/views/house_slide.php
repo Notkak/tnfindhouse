@@ -67,12 +67,12 @@
     <div class='col-md-12'>
       <div class='row'>
         <div class='col-md-2'>
-          บ้านเดี่ยว
+          <h4>บ้านเดี่ยว</h4>
         </div>
         <div class='col-md-8'>
         </div>
         <div class='col-md-2'>
-          ดูทั้งหมด
+          <a href="<?php echo base_url('show_by_type/sale_house') ?>">ดูทั้งหมด >></a>
         </div>
       </div>
       <hr>
@@ -103,11 +103,11 @@
                   </div>
                   <div class="aa-properties-item-content">
                     <div class="aa-properties-about">
-                      <h4><a href="#"><?php echo $posts[$i]['propertyname']; ?></a></h4>
-                      <!-- <div style="float:right">
-                        <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>"> <?php echo $posts[$i]['broom'];?> ห้องนอน</img>
-                        <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>"> <?php echo $posts[$i]['rroom'];?> ห้องน้ำ </img>
-                      </div> -->
+                      <h4><a href="<?php echo base_url() ?>detail_prop/index/<?= $id ?>"><?php echo $posts[$i]['propertyname']; ?></a></h4>
+                      <div style="float:right">
+                      <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>" style="width:24px; height:24px;"> <?php echo $posts[$i]['broom'];?> ห้องนอน</img>
+                      <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>" style="width:24px; height:24px;"> <?php echo $posts[$i]['rroom'];?> ห้องน้ำ </img>
+                      </div>
                     </div>
                     <div class="aa-properties-detial">
                       <span class="aa-price">
@@ -151,11 +151,11 @@
                   </div>
                   <div class="aa-properties-item-content">
                     <div class="aa-properties-about">
-                      <h4><a href="#"><?php echo $posts[$i]['propertyname']; ?></a></h4>
-                      <!-- <div style="float:right">
-                        <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>"> <?php echo $posts[$i]['broom'];?> ห้องนอน</img>
-                        <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>"> <?php echo $posts[$i]['rroom'];?> ห้องน้ำ </img>
-                      </div> -->
+                      <h4><a href="<?php echo base_url() ?>detail_prop/index/<?= $id ?>"><?php echo $posts[$i]['propertyname']; ?></a></h4>
+                      <div style="float:right">
+                        <img src="<?php echo base_url().'asset/front/icon/001-bed.png';?>" style="width:24px; height:24px;"> <?php echo $posts[$i]['broom'];?> ห้องนอน</img>
+                        <img src="<?php echo base_url().'asset/front/icon/003-bathtub.png';?>" style="width:24px; height:24px;"> <?php echo $posts[$i]['rroom'];?> ห้องน้ำ </img>
+                      </div>
                     </div>
                     <div class="aa-properties-detial">
                       <span class="aa-price">

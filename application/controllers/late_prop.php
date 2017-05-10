@@ -56,10 +56,6 @@ class late_prop extends CI_Controller {
   $data['alert']=false;
   $this->load->view('header', $data);
   $this->load->view('search');
-  $this->load->view('home_slide', $data);
-  $this->load->view('home_slide', $data);
-  $this->load->view('home_slide', $data);
-  $this->load->view('home_slide', $data);
   // if ($this->input->post('ajax')) {
   //   $this->load->view('ajax_index', $data);
   // } else {
