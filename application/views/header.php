@@ -24,11 +24,11 @@
       <div class="container" style="margin-top: 5px ">
         <div class="navbar-header">
 
-          <a class="navbar-brand" href="<?php echo base_url('late_prop') ?>"><span class="glyphicon glyphicon-home"></span> FindHouse</a>
+          <a class="navbar-brand" href="<?php echo base_url() ?>"><span class="glyphicon glyphicon-home"></span> FindHouse</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?php echo base_url('late_prop') ?>">หน้าหลัก</a></li>
+            <li><a href="<?php echo base_url() ?>">หน้าหลัก</a></li>
             <li class="dropdown">
               <a href="<?php echo base_url('show_by_type/index/')?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ขาย <span class="caret"></span></a>
               <ul class="dropdown-menu">
