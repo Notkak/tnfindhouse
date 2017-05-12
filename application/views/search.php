@@ -138,8 +138,11 @@
                     <option value="0" selected>--- ทุกราคา ---</option>
                     <option value="1">0 - 500,000</option>
                     <option value="2">500,001 - 1,000,000</option>
-                    <option value="3">1,000,001 - 5,000,000</option>
-                    <option value="4">5,000,000 ขึ้นไป</option>
+                    <option value="3">1,000,001 - 2,000,000</option>
+                    <option value="4">2,000,001 - 3,000,000</option>
+                    <option value="5">3,000,001 - 4,000,000</option>
+                    <option value="6">4,000,001 - 5,000,000</option>
+                    <option value="7">5,000,001 ขึ้นไป</option>
                   </select>
                 </div>
                 <div class="col-md-2">

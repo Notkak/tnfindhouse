@@ -64,5 +64,137 @@ class search extends CI_Controller{
       $this->load->view('footer');
 
     }
+    else if ($province=="0"&&$ptype=="0"&&$price=="0"&&$proptype!="0") {
+      // echo "4";exit();
+      $dataSearch['search_type']=4;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province!="0"&&$ptype!="0"&&$price=="0"&&$proptype=="0") {
+      // echo "5";exit();
+      $dataSearch['search_type']=5;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province!="0"&&$ptype=="0"&&$price!="0"&&$proptype=="0") {
+      // echo "6";exit();
+      $dataSearch['search_type']=6;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province!="0"&&$ptype=="0"&&$price=="0"&&$proptype!="0") {
+      // echo "7";exit();
+      $dataSearch['search_type']=7;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province=="0"&&$ptype!="0"&&$price!="0"&&$proptype=="0") {
+      // echo "8";exit();
+      $dataSearch['search_type']=8;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province=="0"&&$ptype!="0"&&$price=="0"&&$proptype!="0") {
+      // echo "9";exit();
+      $dataSearch['search_type']=9;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province=="0"&&$ptype=="0"&&$price!="0"&&$proptype!="0") {
+      // echo "10";exit();
+      $dataSearch['search_type']=10;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province!="0"&&$ptype!="0"&&$price!="0"&&$proptype=="0") {
+      // echo "11";exit();
+      $dataSearch['search_type']=11;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province!="0"&&$ptype!="0"&&$price=="0"&&$proptype!="0") {
+      // echo "12";exit();
+      $dataSearch['search_type']=12;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province=="0"&&$ptype!="0"&&$price!="0"&&$proptype!="0") {
+      // echo "13";exit();
+      $dataSearch['search_type']=13;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province!="0"&&$ptype=="0"&&$price!="0"&&$proptype!="0") {
+      // echo "14";exit();
+      $dataSearch['search_type']=14;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
+    else if ($province!="0"&&$ptype!="0"&&$price!="0"&&$proptype!="0") {
+      // echo "15";exit();
+      $dataSearch['search_type']=15;
+      $data['posts']=$this->mse->get_data($dataSearch);
+      $data['title']="ค้นหาอสังหาริมทรัพย์";
+      $this->load->view('header',$data);
+      $this->load->view('search');
+      $this->load->view('show_search',$data);
+      $this->load->view('footer');
+
+    }
   }
 }
