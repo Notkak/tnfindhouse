@@ -13,7 +13,7 @@ class homepage extends CI_Controller{
     $data['posts'] = $this->mhs->get_data();
     $data['title']="หน้าหลัก";
     // echo "<pre>";print_r($data);exit();
-    $this->load->view('header',$data);
+    $this->load->view('header2',$data);
     $this->load->view('search');
     $this->load->view('house_slide',$data);
     $this->load->view('townhouse_slide',$data);

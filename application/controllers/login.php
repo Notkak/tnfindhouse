@@ -67,7 +67,7 @@ class login extends CI_Controller{
   public function logout(){
     $this->session->unset_userdata($session_arr);
     $this->session->sess_destroy();
-    redirect(base_url('home'));
+    redirect(base_url('homepage'));
 
   }
 
