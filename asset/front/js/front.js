@@ -45,3 +45,26 @@ function send_login() {
     }
   })
 }
+function send_forgot() {
+  $.ajax({
+    url: "http://localhost:8181/tnfindhouse/login/chk_forgot",
+    type: 'POST',
+    dataType: 'json',
+    data: $('#form_forgot').serialize(),
+    encode:true,
+    success:function(data) {
+      if(!data.success){
+        if(data.errors){
+          $('#error').html(data.errors).addClass('alert alert-danger');
+          // $('#message').hide(1000);
+          $('#error').show(2000);
+        }
+      }else {
+        alert(data.message);
+        setTimeout(function() {
+          window.location.reload()
+        }, 400);
+      }
+    }
+  })
+}

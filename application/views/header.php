@@ -77,7 +77,6 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
 <!-- LOGIN -->
 <div id="login" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -97,6 +96,7 @@
             <label for="pwd">Password:</label>
             <input type="password" class="form-control" id="password" name="password">
           </div>
+          <p><a data-toggle="modal" data-target="#forgot" data-dismiss="modal">ลืมรหัสผ่าน?</a></p>
 
       </div>
       <div class="modal-footer">
@@ -109,6 +109,47 @@
   </div>
 </div>
 <!-- LOGIN -->
+<!-- forgot -->
+<div id="forgot" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-log-in"></span> ลืมรหัสผ่าน</h4>
+      </div>
+      <div class="modal-body">
+        <div id="error"></div>
+        <form id="form_forgot" action="<?php echo base_url() ?>login/chk_forgot" method="post">
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+          <div class="form-group">
+						<label for="question">คำถามกันลืม:</label>
+              <select class="form-control" name="question">
+                <option value="0" selected>สัตว์เลี้ยงตัวแรกของคุณคือ?</option>
+                <option value="1">เพื่อนที่สนิทของคุณคือ?</option>
+                <option value="2">แม่ของคุณชื่ออะไร?</option>
+                <option value="3">งานอดิเรกของคุณคือ?</option>
+                <option value="4">โรงเรียนมัธยมของคุณชื่ออะไร?</option>
+                <option value="5">สถานที่เกิดของคุณคือ?</option>
+              </select>
+					</div>
+          <div class="form-group">
+            <label for="answer">คำตอบ:</label>
+            <input type="text" class="form-control" id="answer" name="answer">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">ตรวจสอบ</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
+      </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- forgot -->
 
 <!-- REGISTER2 -->
 <div id="register2" class="modal fade" role="dialog">
@@ -125,33 +166,49 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-  						<label for="fname">ชื่อ :</label>
+  						<label for="fname">ชื่อ:</label>
   							<input type="text" name="fname" id="fname" class="form-control">
   					</div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-  						<label for="lname">นามสกุล :</label>
+  						<label for="lname">นามสกุล:</label>
   							<input type="text" name="lname" id="lname" class="form-control">
   					</div>
           </div>
         </div>
           <div class="form-group">
-						<label for="telephone">เบอร์โทรศัพท์</label>
+						<label for="telephone">เบอร์โทรศัพท์:</label>
 							<input type="text" name="telephone" id="telephone" class="form-control">
 					</div>
 					<div class="form-group">
-						<label for="email">อีเมลแอดเดรส</label>
+						<label for="email">อีเมลแอดเดรส:</label>
 							<input type="text" name="regis_email" id="regis_email" class="form-control">
 					</div>
 					<div class="form-group">
-						<label for="password">พาสเวิร์ด</label>
+						<label for="password">พาสเวิร์ด:</label>
 							<input type="password" name="regis_password" id="regis_password" class="form-control">
 					</div>
 					<div class="form-group">
-						<label for="password_confirm">ยืนยันพาสเวิร์ด</label>
+						<label for="password_confirm">ยืนยันพาสเวิร์ด:</label>
 							<input type="password" name="password_confirm" id="password_confirm" class="form-control">
 					</div>
+          <div class="form-group">
+						<label for="question">คำถามกันลืม:</label>
+              <select class="form-control" name="question">
+                <option value="0" selected>สัตว์เลี้ยงตัวแรกของคุณคือ?</option>
+                <option value="1">เพื่อนที่สนิทของคุณคือ?</option>
+                <option value="2">แม่ของคุณชื่ออะไร?</option>
+                <option value="3">งานอดิเรกของคุณคือ?</option>
+                <option value="4">โรงเรียนมัธยมของคุณชื่ออะไร?</option>
+                <option value="5">สถานที่เกิดของคุณคือ?</option>
+              </select>
+					</div>
+          <div class="form-group">
+						<label for="answer">คำตอบ:</label>
+							<input type="text" name="answer" id="answer" class="form-control">
+					</div>
+
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary">สมัครสมาชิก</button>

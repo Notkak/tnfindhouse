@@ -7,6 +7,7 @@ class login extends CI_Controller{
     parent::__construct();
     $this->load->library("session");
     $this->load->model('mdl_login');
+    $this->load->model('mdl_register');
   }
 
   public function index()
@@ -14,7 +15,7 @@ class login extends CI_Controller{
     if($this->chk_login()==false){
       redirect(base_url('home/login_fail'));
     }else{
-      redirect(base_url('home'));
+      redirect(base_url('homepage'));
     }
   }
 
@@ -63,6 +64,80 @@ class login extends CI_Controller{
     //echo $email,$password; die();
 
   }
+
+  public function chk_forgot(){
+    $this->form_validation->set_rules('email','Email','required');
+    $this->form_validation->set_rules('answer','Answer','required');
+      $email=$this->input->post('email');
+      $question=$this->input->post('question');
+      $answer=$this->input->post('answer');
+      // echo $email,$question,$answer; die();
+      $result=$this->mdl_login->get_data($email);
+      if($result){
+        foreach ($result as $row) {
+          $quest=$row->question;
+          $ans=$row->ans;
+          $id=$row->user_id;
+        }
+            if($question==$quest&&$answer==$ans){
+              $data['title']="หน้าหลัก";
+              $data['uid']=$id;
+              $data['status']=0;
+              // echo "<pre>";print_r($data);exit();
+              $this->load->view('header',$data);
+              $this->load->view('search');
+              $this->load->view('forgot_pass',$data);
+              $this->load->view('footer');
+            }else{
+              redirect(base_url('homepage'));
+            }
+      }else{
+        redirect(base_url('homepage'));
+      }
+    }
+
+    public function change_forgot($id){
+      $pass=$this->input->post('regis_password');
+      $npass=$this->input->post('password_confirm');
+      if($pass==$npass){
+            $hash = $this->mdl_register->getHash($pass);
+            $encrypted_password = $hash["encrypted"];
+            $salt = $hash["salt"];
+            $sql="UPDATE user SET salt= '$salt',encrypted_password= '$encrypted_password' where user_id='$id'";
+            $rs=$this->db->query($sql);
+        if($rs==false){
+          $data['title']="หน้าหลัก";
+          $data['uid']=$id;
+          $data['status']=2;
+          // echo "<pre>";print_r($data);exit();
+          $this->load->view('header',$data);
+          $this->load->view('search');
+          $this->load->view('forgot_pass',$data);
+          $this->load->view('footer');
+        }else{
+          $data['title']="หน้าหลัก";
+          $data['uid']=$id;
+          $data['status']=1;
+          // echo "<pre>";print_r($data);exit();
+          $this->load->view('header',$data);
+          $this->load->view('search');
+          $this->load->view('forgot_pass',$data);
+          $this->load->view('footer');
+        }
+      }else{
+        $data['title']="หน้าหลัก";
+        $data['uid']=$id;
+        $data['status']=2;
+        // echo "<pre>";print_r($data);exit();
+        $this->load->view('header',$data);
+        $this->load->view('search');
+        $this->load->view('forgot_pass',$data);
+        $this->load->view('footer');
+      }
+
+
+    }
+
 
   public function logout(){
     $this->session->unset_userdata($session_arr);

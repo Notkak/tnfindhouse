@@ -19,6 +19,7 @@ class register extends CI_Controller{
     $this->form_validation->set_rules('password','Password','required|min_length[8]');
     $this->form_validation->set_rules('repassword','Repassword','required|min_length[8]|matches[password]');
     $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+    $this->form_validation->set_rules('answer','Answer','required');
     if ($this->form_validation->run()==FALSE) {
 			$info['success']=FALSE;
 			$info['errors']=validation_errors();
@@ -28,9 +29,11 @@ class register extends CI_Controller{
 				'first_name'=>$this->input->post('fname'),
 				'last_name'=>$this->input->post('lname'),
 				'email'=>$this->input->post('email'),
-				'tel'=>$this->input->post('telephone')
+				'tel'=>$this->input->post('telephone'),
+        'question'=>$this->input->post('question'),
+        'ans'=>$this->input->post('answer')
 			);
-      //echo "<pre>"; print_r($data); die();
+      // echo "<pre>"; print_r($dataregis); die();
       $password=$this->input->post('password');
       $uniqid= uniqid(' ',true);
       //echo $uniqid;
@@ -83,13 +86,16 @@ public function test_upload(){
     $this->form_validation->set_rules("regis_email", "Email", "trim|required|valid_email|is_unique[user.email]'");
     $this->form_validation->set_rules("regis_password", "Password", "trim|required");
     $this->form_validation->set_rules("password_confirm", "Password Confirm", "trim|required|matches[regis_password]");
+    $this->form_validation->set_rules("answer","Answer","trim|required");
     $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
     if ($this->form_validation->run()) {
       $data=array(
 				'first_name'=>$this->input->post('fname'),
         'last_name'=>$this->input->post('lname'),
 				'tel'=>$this->input->post('telephone'),
-				'email'=>$this->input->post('regis_email')
+				'email'=>$this->input->post('regis_email'),
+        'question'=>$this->input->post('question'),
+        'ans'=>$this->input->post('answer')
 			);
       $password=$this->input->post('regis_password');
       $uniqid= uniqid(' ',true);
