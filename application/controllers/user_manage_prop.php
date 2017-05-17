@@ -53,6 +53,8 @@ class user_manage_prop extends CI_Controller{
       $data['price']=$r['price'];
       $data['rroom']=$r['rroom'];
       $data['broom']=$r['broom'];
+      $data['finish_year']=$r['finish_year'];
+      $data['area']=$r['area'];
       $data['activation']=$r['activation'];
       $data['created']=$r['created'];
       $data['province']=$r['province'];
@@ -111,6 +113,8 @@ class user_manage_prop extends CI_Controller{
       'price' => $this->input->post('price'),
       'rroom' => $this->input->post('rroom'),
       'broom' => $this->input->post('broom'),
+      'finish_year' => $this->input->post('finish_year'),
+      'area' => $this->input->post('area')
     );
     $data_prop=array_filter($dataproperty);
     if(!empty($data_prop)){
@@ -153,7 +157,7 @@ class user_manage_prop extends CI_Controller{
     $c_img=count($rs_img);
     for($i=0;$i<$c_img;$i++){
       $dataimg=array(
-        'property_id'=>$id,
+        'for_property_id'=>$id,
         'img_part'=>'uploads/files/'.$rs_img[$i]
       );
       $this->ap->insert_img($dataimg);

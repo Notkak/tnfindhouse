@@ -15,7 +15,7 @@ class test_json extends CI_Controller{
     $this->db->where('ptype',"บ้านเดี่ยว");
     $query = $this->db->get();
     $rs=$query->result_array();
-    
+
     $img=$this->get_image($rs['0']['property_id']);
     $rs['img']=$img;
     echo json_encode($rs);exit();

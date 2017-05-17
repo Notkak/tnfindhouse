@@ -27,7 +27,6 @@
               <option value="บ้านเดี่ยว" selected>บ้านเดี่ยว</option>
               <option value="ทาวน์เฮ้าส์">ทาวน์เฮ้าส์</option>
               <option value="คอนโด">คอนโด</option>
-              <option value="อพาร์ตเมนต์">อพาร์ตเมนต์</option>
               <option value="ที่ดิน">ที่ดิน</option>
               <?php }
               else if($ptype=="ทาวน์เฮ้าส์"){?>
@@ -253,11 +252,11 @@
             <div class="row">
               <div class="col-md-6">
                 <label>ปีที่สร้างเสร็จ</label>
-                <input class="form-control" name="kroom" placeholder="" />
+                <input class="form-control" name="finish_year" placeholder="<?php echo $finish_year;?>" />
               </div>
               <div class="col-md-6">
                 <label>ขนาดพื้นที่</label>
-                <input class="form-control" name="lroom" placeholder="" />
+                <input class="form-control" name="area" placeholder="<?php echo $area;?>" />
               </div>
           </div>
 

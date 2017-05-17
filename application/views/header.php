@@ -56,7 +56,7 @@
           </ul>
           <?php }else{ ?>
             <ul class="nav navbar-nav navbar-right">
-              <li><img src="<?php $img=$this->session->userdata('img'); echo base_url($img) ?>" class="img-circle" alt="Cinque Terre" width="44" height="44"></li>
+              <li><img src="<?php $img=$this->session->userdata('img'); echo base_url($img); ?>" class="img-circle" alt="Cinque Terre" width="44" height="44"></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php $name=$this->session->userdata('name'); echo $name ?> <span class="caret"></span></a>
                 <ul class="dropdown-menu">

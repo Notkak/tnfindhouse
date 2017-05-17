@@ -22,7 +22,6 @@
               <option value="บ้านเดี่ยว">บ้านเดี่ยว</option>
               <option value="ทาวน์เฮ้าส์">ทาวน์เฮ้าส์</option>
               <option value="คอนโด">คอนโด</option>
-              <option value="อพาร์ตเมนต์">อพาร์ตเมนต์</option>
               <option value="ที่ดิน">ที่ดิน</option>
             </select>
             <label>สถานที่ใกล้เคียง</label>
@@ -172,12 +171,12 @@
             </div>
             <div class="row">
               <div class="col-md-6">
-                <label>จำนวนห้องครัว</label>
-                <input class="form-control" name="kroom" placeholder="" />
+                <label>ปีที่สร้างเสร็จ</label>
+                <input class="form-control" name="finish_year" placeholder="" />
               </div>
               <div class="col-md-6">
-                <label>จำนวนห้องนั่งเล่น</label>
-                <input class="form-control" name="lroom" placeholder="" />
+                <label>ขนาดพื้นที่</label>
+                <input class="form-control" name="area" placeholder="" />
               </div>
           </div>
           <label>รูปภาพประกอบ</label>

@@ -72,7 +72,7 @@
         <div class='col-md-8'>
         </div>
         <div class='col-md-2'>
-          ดูทั้งหมด
+          <a href="<?php echo base_url('show_by_type/sale_land') ?>">ดูทั้งหมด >></a>
         </div>
       </div>
 <hr>

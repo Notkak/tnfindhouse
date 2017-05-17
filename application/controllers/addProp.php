@@ -54,6 +54,8 @@ class addProp extends CI_Controller{
       'price' => $this->input->post('price'),
       'rroom' => $this->input->post('rroom'),
       'broom' => $this->input->post('broom'),
+      'finish_year' => $this->input->post('finish_year'),
+      'area' => $this->input->post('area'),
       'user_id' => $id
     );
 
@@ -87,7 +89,7 @@ class addProp extends CI_Controller{
       );
       $this->ap->insert_img($dataimg);
     }
-    redirect(base_url('home/'));
+    redirect(base_url('homepage'));
     //echo "<pre>";print_r($dataproperty);print_r($dataaddress);exit();
   }
 }
