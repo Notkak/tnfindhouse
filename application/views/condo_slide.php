@@ -67,7 +67,7 @@
     <div class='col-md-12'>
       <div class='row'>
         <div class='col-md-2'>
-          คอนโดมิเนียม
+          <h4>คอนโดมิเนียม</h4>
         </div>
         <div class='col-md-8'>
         </div>
@@ -89,9 +89,11 @@
                       if($status == "ขาย"){
                         $status_label = "sale";
                         $status_desc = "ขาย";
+                        $bath="บาท";
                       }else{
                         $status_label = "rent";
                         $status_desc = "ให้เช่า";
+                        $bath="บาท/เดือน";
                       }
                     ?>
               <div class="col-md-4">
@@ -113,8 +115,8 @@
                     <div class="aa-properties-detial">
                       <span class="aa-price">
                         <?php
-                            echo number_format($posts[$i]['price']);
-                        ?> ฿
+                            echo number_format($posts[$i]['price']),$bath;
+                        ?>
                       </span>
                       <a href="<?php echo base_url() ?>detail_prop/index/<?= $id ?>" class="btn btn-primary">รายละเอียด</a>
                     </div>
@@ -137,9 +139,11 @@
                       if($status == "ขาย"){
                         $status_label = "sale";
                         $status_desc = "ขาย";
+                        $bath="บาท";
                       }else{
                         $status_label = "rent";
                         $status_desc = "ให้เช่า";
+                        $bath="บาท/เดือน";
                       }
                     ?>
               <div class="col-md-4">
@@ -161,8 +165,8 @@
                     <div class="aa-properties-detial">
                       <span class="aa-price">
                         <?php
-                            echo number_format($posts[$i]['price']);
-                        ?> ฿
+                            echo number_format($posts[$i]['price']),$bath;
+                        ?> 
                       </span>
                       <a href="<?php echo base_url() ?>detail_prop/index/<?= $id ?>" class="btn btn-primary">รายละเอียด</a>
                     </div>

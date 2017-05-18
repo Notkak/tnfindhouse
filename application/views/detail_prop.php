@@ -1,6 +1,6 @@
 <?php echo $map['js']; ?>
-<div class="container">
-  <div class="jumbotron">
+<div class="container" >
+  <div class="jumbotron" style="margin-top:10px; background-color:white;">
    <div class="row">
      <div class="col-md-8">
        <div id="myCarousel" class="carousel slide" data-ride="carousel">

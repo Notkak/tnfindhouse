@@ -74,6 +74,7 @@ class detail_prop extends CI_Controller{
     $data['title']="แสดงรายละเอียด";
     // echo "<pre>";print_r($result_map);exit();
     $this->load->view('header', $data);
+    $this->load->view('search', $data);
     $this->load->view('detail_prop' ,$data);
     $this->load->view('footer');
   }

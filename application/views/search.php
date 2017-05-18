@@ -1,4 +1,4 @@
-<style>
+lo<style>
     body {
       background-color:#fff;
       -webkit-font-smoothing: antialiased;

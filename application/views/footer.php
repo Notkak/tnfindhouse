@@ -1,14 +1,14 @@
 <style>
     @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
-    footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
-    .footerleft { margin-top:50px; padding:0 36px; }
+    footer { background-color:#0c1a1e; min-height:200px; font-family: 'Open Sans', sans-serif; }
+    .footerleft { margin-top:20px; padding:0 36px; }
     .logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
 
     .footerleft p { color:#fff; font-size:12px !important; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
     .footerleft p i { width:20px; color:#999;}
 
 
-    .paddingtop-bottom {  margin-top:50px;}
+    .paddingtop-bottom {  margin-top:20px;}
     .footer-ul { list-style-type:none;  padding-left:0px; margin-left:2px;}
     .footer-ul li { line-height:29px; font-size:12px;}
     .footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
@@ -45,39 +45,20 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-6 footerleft ">
-        <div class="logofooter"> Logo</div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-        <p><i class="fa fa-map-pin"></i> 210, Aggarwal Tower, Rohini sec 9, New Delhi -        110085, INDIA</p>
-        <p><i class="fa fa-phone"></i> Phone (India) : +91 9999 878 398</p>
-        <p><i class="fa fa-envelope"></i> E-mail : info@webenlance.com</p>
+        <div class="logofooter"> <span class="glyphicon glyphicon-home"></span> FindHouse</div>
+        <p>เว็บไซต์สำหรับค้นหาอสังหาริมทรัพย์ ให้คุณสามารถค้นหาอสังหาริมทรัพย์ที่ตรงใจ สนใจลงโฆษณาติดต่อ</p>
+        <p><i class="fa fa-map-pin"></i> 38 ถนนเพชรเกษม เขตภาษีเจริญ กรุงเทพมหานคร 10160 </p>
+        <p><i class="fa fa-phone"></i> Phone (Thailand) : +66 0-2867-8088</p>
+        <p><i class="fa fa-envelope"></i> E-mail : infosu@siam.edu</p>
 
       </div>
       <div class="col-md-2 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">GENERAL LINKS</h6>
-        <ul class="footer-ul">
-          <li><a href="#"> Career</a></li>
-          <li><a href="#"> Privacy Policy</a></li>
-          <li><a href="#"> Terms & Conditions</a></li>
-          <li><a href="#"> Client Gateway</a></li>
-          <li><a href="#"> Ranking</a></li>
-          <li><a href="#"> Case Studies</a></li>
-          <li><a href="#"> Frequently Ask Questions</a></li>
-        </ul>
+
       </div>
       <div class="col-md-3 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7">LATEST POST</h6>
-        <div class="post">
-          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
-          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
-          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
-        </div>
       </div>
       <div class="col-md-3 col-sm-6 paddingtop-bottom">
-        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-          <div class="fb-xfbml-parse-ignore">
-            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -87,17 +68,10 @@
 <div class="copyright">
   <div class="container">
     <div class="col-md-6">
-      <p>© 2016 - All Rights with Webenlance</p>
+      <p>© 2017 - All Rights with FindHouse</p>
     </div>
     <div class="col-md-6">
-      <ul class="bottom_ul">
-        <li><a href="#">webenlance.com</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Faq's</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Site Map</a></li>
-      </ul>
+      
     </div>
   </div>
 </div>

@@ -47,7 +47,6 @@
                 <li><a href="<?php echo base_url('show_by_type/rent_land')?>">ที่ดิน</a></li>
               </ul>
             </li>
-            <li><a href="#about">บทความ</a></li>
           </ul>
           <?php if($this->session->userdata('is_login') == false){ ?>
           <ul class="nav navbar-nav navbar-right">

@@ -7,7 +7,7 @@ class show_by_type extends CI_Controller{
     parent::__construct();
     $this->load->model('mdl_show_by_type','ms');
     $this->load->library('Ajax_pagination');
-    $this->perPage = 2;
+    $this->perPage = 4;
   }
 // house
   public function sale_house(){
@@ -25,6 +25,7 @@ class show_by_type extends CI_Controller{
     $data['type']="house";
     $data['ptype']="sale";
     $this->load->view('header',$data);
+    $this->load->view('search');
     $this->load->view('show_by_type',$data);
     $this->load->view('footer');
   }
